@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=lock,person,mail" />
+    
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        </style>
+    
 </head>
 <body>
     <main>
@@ -17,8 +30,24 @@
                 <p>
                     Seja bem vindo! Faça login para ter acesso aos seus conteúdos.
                 </p>
-                <form action="login.php" method="post">
-                    
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo">
+                        <span class="material-symbols-outlined">
+                            person
+                            </span>
+                        <input type="email" name="login" id="ilogin" placeholder="Seu e-mail" autocomplete="on">
+                        <label for="ilogin">Login</label>
+                    </div>
+                    <div class="senha">
+                        <span class="material-symbols-outlined">
+                            lock
+                            </span>
+                        <input type="password" name="senha" id="isenha" placeholder="sua senha" autocomplete="on">
+                        <label for="isenha">Senha</label>
+                    </div>
+
+                    <input type="submit" name="Entrar">
+                    <a href="esqueci.html">Esqueci a senha</a>
                 </form>
             </div>
 
